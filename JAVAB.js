@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Links do convite
 const LINK_MAPA = 'https://maps.app.goo.gl/ivcWJuAmVnSw7smi9';
 const LINK_FOTOS = 'https://photos.app.goo.gl/y4u7fANHFaevNxxQ6';
-const WHATSAPP_NUMERO = '18293229309';
+const WHATSAPP_NUMERO = '5511982626859';
 const WHATSAPP_MENSAGEM = 'Olá! Confirmo minha presença nos 15 anos da Aliny Lara.';
 
 function openLocation(location) {
