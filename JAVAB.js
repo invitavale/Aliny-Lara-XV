@@ -52,9 +52,9 @@ function initializeIntro() {
         if (audio && mp3Available && !audio.error) {
             usingMp3 = true;
             audio.volume = 1;
-            // La canción trae ~5.8 s de silencio al inicio. Cuando empieza a
-            // escucharse, se apaga el sonido de la puerta.
-            const MUSICA_ENTRA_SEG = 5.7;
+            // "Perfect" empieza casi enseguida (~0.5 s). En cuanto se escucha,
+            // se apaga el sonido de la puerta.
+            const MUSICA_ENTRA_SEG = 0.5;
             const onTime = () => {
                 if (audio.currentTime >= MUSICA_ENTRA_SEG) {
                     audio.removeEventListener('timeupdate', onTime);
@@ -211,7 +211,7 @@ function updateMusicIcon() {
 
 // Countdown
 function initializeCountdown() {
-    const targetDate = new Date('2026-11-14T17:00:00').getTime();
+    const targetDate = new Date('2026-11-13T17:00:00-03:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
@@ -373,40 +373,36 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(markCenterCarouselItem, 200);
 });
 
-// Funciones de los botones (plantilla de ejemplo: sin enlaces reales)
+// Links do convite
+const LINK_MAPA = 'https://maps.app.goo.gl/ivcWJuAmVnSw7smi9';
+const LINK_FOTOS = 'https://photos.app.goo.gl/y4u7fANHFaevNxxQ6';
+const WHATSAPP_NUMERO = '18293229309';
+const WHATSAPP_MENSAGEM = 'Olá! Confirmo minha presença nos 15 anos da Aliny Lara.';
+
 function openLocation(location) {
-    // Enlace de ejemplo, reemplazar por la ubicación real del evento
+    window.open(LINK_MAPA, '_blank');
 }
 
 function uploadPhoto() {
-    // Enlace de ejemplo, reemplazar por el álbum real para subir fotos
+    window.open(LINK_FOTOS, '_blank');
 }
 
 function showDressCode() {
     showInfoModal(
-        "Código de Vestimenta",
-        `<p>Vestimenta formal: vestidos y trajes.</p>
+        "Traje",
+        `<p>Traje formal.</p>
          <div class="no-green-note">
-            <span class="no-green-swatch" aria-hidden="true"></span>
-            <p>El color azul rey está reservado exclusivamente para la quinceañera. Se solicita amablemente a los invitados evitar su uso.</p>
+            <span class="no-color-swatches" aria-hidden="true">
+                <span class="no-green-swatch swatch-azul"></span>
+                <span class="no-green-swatch swatch-branco"></span>
+            </span>
+            <p>As cores azul e branco são exclusivas da aniversariante. Pedimos gentilmente aos convidados que evitem usá-las.</p>
          </div>`
     );
 }
 
-function showTips() {
-    showInfoModal(
-        "Tips y Notas",
-        `<p>Este es un evento exclusivo para adultos. Se solicita amablemente no asistir con niños ni acompañantes no confirmados.</p>
-         <p>Agradecemos su comprensión y esperamos contar con su presencia.</p>`
-    );
-}
-
-function showGifts() {
-    // Enlace de ejemplo, reemplazar por la página real de regalos/cuenta
-}
-
 function confirmAttendance() {
-    // Enlace de ejemplo, reemplazar por el WhatsApp real de confirmación
+    window.open('https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(WHATSAPP_MENSAGEM), '_blank');
 }
 
 // Modal de información (ventana flotante reutilizable, ej. Dress Code)

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="es" class="intro-lock">
+<html lang="pt-BR" class="intro-lock">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>María - Mis XV Años</title>
+    <title>Aliny Lara - Meus 15 Anos</title>
     <link rel="preload" as="image" href="puerta-poster.jpg">
-    <link rel="stylesheet" href="CCSB.css?v=23">
+    <link rel="stylesheet" href="CCSB.css?v=26">
 </head>
 <body>
     <div class="main-center">
         <!-- Intro: video de la puerta. Al tocarlo entra con música -->
         <div id="introVideo" class="intro-video" role="button" tabindex="0"
-             aria-label="Toca para abrir la invitación"
+             aria-label="Toque para abrir o convite"
              style="--intro-poster: url('puerta-poster.jpg?v=2');">
             <video id="doorVideo" src="puerta.mp4?v=2" poster="puerta-poster.jpg?v=2"
                    playsinline webkit-playsinline preload="auto"></video>
-            <div class="intro-hint">Toca para abrir</div>
+            <div class="intro-hint">Toque para abrir o convite</div>
         </div>
 
         <!-- Música de fondo: archivo propio, arranca en el mismo toque que la puerta -->
@@ -23,7 +23,7 @@
 
         <!-- Reproductor de música -->
         <div id="musicPlayer" class="music-player" style="display: none;">
-            <button id="musicToggle" class="music-button modern-icon" title="Reproducir/Pausar música">
+            <button id="musicToggle" class="music-button modern-icon" title="Tocar/Pausar música">
                 <svg id="volumeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none">
                     <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="#222" stroke="#fff" stroke-width="1"></polygon>
                     <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.08" stroke="#222" stroke-width="2"></path>
@@ -48,9 +48,9 @@
 
         <!-- ============ COUNTDOWN ============ -->
         <section class="countdown-section">
-            <h2 class="section-title">Falta</h2>
+            <h2 class="section-title">Faltam</h2>
             <div class="countdown-container">
-                <div class="countdown-item"><div class="countdown-number" id="days">00</div><div class="countdown-label">DÍAS</div></div>
+                <div class="countdown-item"><div class="countdown-number" id="days">00</div><div class="countdown-label">DIAS</div></div>
                 <div class="countdown-item"><div class="countdown-number" id="hours">00</div><div class="countdown-label">HORAS</div></div>
                 <div class="countdown-item"><div class="countdown-number" id="minutes">00</div><div class="countdown-label">MINUTOS</div></div>
                 <div class="countdown-item"><div class="countdown-number" id="seconds">00</div><div class="countdown-label">SEGUNDOS</div></div>
@@ -66,47 +66,18 @@
             <div class="events-container">
                 <div class="event-card">
                     <div class="event-icon"><img src="assets/lotus-icon.png" alt=""></div>
-                    <h3 class="event-title">Celebración</h3>
+                    <h3 class="event-title">Celebração</h3>
                     <div class="event-details">
-                        <h4>Día</h4>
-                        <p>Sábado 14 de Noviembre - 5:00pm</p>
+                        <h4>Data</h4>
+                        <p>Sexta-feira, 13 de Novembro - 17h00</p>
                     </div>
                     <div class="event-details">
-                        <h4>Lugar</h4>
-                        <p>Salón Los Almendros</p>
-                        <p class="event-address">Calle Principal #45, Santo Domingo</p>
+                        <h4>Local</h4>
+                        <p>Espaço Bartô</p>
+                        <p class="event-address">Rodovia Benevenuto Moretto, Km 5,5</p>
                     </div>
-                    <button class="btn-wedding" onclick="openLocation('celebration')">¿Cómo llegar?</button>
+                    <button class="btn-wedding" onclick="openLocation('celebration')">Como chegar?</button>
                 </div>
-            </div>
-        </section>
-        <div class="seam-divider-wrap"><div class="seam-divider"><span class="line"></span><span class="ornament">✦</span><span class="line right"></span></div></div>
-
-        <!-- ============ GALERÍA / CARRUSEL ============ -->
-        <section class="gallery-section">
-            <div class="firefly" style="left:30%;top:8px;animation-delay:1.6s"></div>
-            <div class="firefly" style="right:22%;bottom:6px;animation-delay:.8s"></div>
-            <div class="gallery-container">
-                <h2 class="section-title">Momentos Para Atesorar</h2>
-                <p class="section-subtitle">Cada fotografía es un paso más en el camino hacia mis quince años</p>
-                <div class="camera-icon">
-                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#d6b35a" stroke-width="1.3"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7l1.5-2.5h5L16 7"/><circle cx="12" cy="13.5" r="3.2"/></svg>
-                </div>
-                <div class="carousel-container">
-                  <button class="carousel-btn carousel-prev" id="prevBtn">❮</button>
-                  <div class="carousel-track-container">
-                    <div class="carousel-track" id="carouselTrack">
-                      <div class="carousel-item"><img class="framed-photo" src="foto1.jpg" alt="Foto de María"></div>
-                      <div class="carousel-item"><img class="framed-photo" src="foto2.jpg" alt="Foto de María"></div>
-                      <div class="carousel-item"><img class="framed-photo" src="foto3.jpg" alt="Foto de María"></div>
-                      <div class="carousel-item"><img class="framed-photo" src="foto4.jpg" alt="Foto de María"></div>
-                      <div class="carousel-item"><img class="framed-photo" src="foto5.jpg" alt="Foto de María"></div>
-                      <div class="carousel-item"><img class="framed-photo" src="foto6.jpg" alt="Foto de María"></div>
-                    </div>
-                  </div>
-                  <button class="carousel-btn carousel-next" id="nextBtn">❯</button>
-                </div>
-                <div class="carousel-counter"><span id="currentSlide">1</span> / <span id="totalSlides">6</span> fotos</div>
             </div>
         </section>
         <div class="seam-divider-wrap"><div class="seam-divider"><span class="line"></span><span class="ornament">✦</span><span class="line right"></span></div></div>
@@ -116,28 +87,33 @@
             <div class="firefly" style="left:18%;top:8px;animation-delay:1.2s"></div>
             <div class="firefly" style="right:24%;bottom:6px;animation-delay:.3s"></div>
             <div class="party-container">
-                <h2 class="section-title">Fiesta</h2>
-                <p class="section-subtitle">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+                <h2 class="section-title">Festa</h2>
+                <p class="section-subtitle">Vamos fazer juntos uma festa inesquecível. Aqui estão alguns detalhes importantes.</p>
                 <div class="party-grid">
                     <div class="party-card">
-                        <div class="party-icon"><svg width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="#d6b35a" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6l1.4-2.2h5.2L16 6"/><circle cx="12" cy="13" r="3.4"/><path d="M12 10.3v-3M10.6 8.7h2.8"/></svg></div>
-                        <h3>Comparte tus Fotos</h3>
-                        <p>Ayúdanos a reunir los recuerdos de este día compartiendo tus fotografías del momento</p>
-                        <button class="btn-wedding" onclick="uploadPhoto()">Subir Foto</button>
+                        <div class="party-icon"><img class="icon-img" src="assets/icono-camara.png" alt=""></div>
+                        <h3>Compartilhe suas Fotos</h3>
+                        <p>Ajude-nos a reunir as lembranças deste dia compartilhando suas fotos do momento</p>
+                        <button class="btn-wedding" onclick="uploadPhoto()">Enviar Foto</button>
                     </div>
                     <div class="party-card">
-                        <div class="party-icon bowtie-icon"><svg width="55" height="55" viewBox="0 0 64 64" fill="none"><path d="M4 24 L24 32 L4 40 Z" fill="#d6b35a"/><rect x="28" y="26" width="8" height="12" rx="2" fill="#f0d78a"/><path d="M60 24 L40 32 L60 40 Z" fill="#d6b35a"/><circle cx="32" cy="32" r="3" fill="#d6b35a"/></svg></div>
-                        <h3>Código de Vestimenta</h3>
-                        <p>Una orientación para tu vestuario</p>
-                        <button class="btn-wedding" onclick="showDressCode()">Ver más</button>
-                    </div>
-                    <div class="party-card">
-                        <div class="party-icon"><svg width="55" height="55" viewBox="0 0 24 24" fill="none" stroke="#d6b35a" stroke-width="1.4"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
-                        <h3>Tips y Notas</h3>
-                        <p>Información adicional para tener en cuenta</p>
-                        <button class="btn-wedding" onclick="showTips()">+ Info</button>
+                        <div class="party-icon bowtie-icon"><img class="icon-img icon-bowtie" src="assets/icono-corbatin.png" alt=""></div>
+                        <h3>Traje</h3>
+                        <p>Uma orientação para o seu traje</p>
+                        <button class="btn-wedding" onclick="showDressCode()">Ver mais</button>
                     </div>
                 </div>
+            </div>
+        </section>
+        <div class="seam-divider-wrap"><div class="seam-divider"><span class="line"></span><span class="ornament">✦</span><span class="line right"></span></div></div>
+
+        <!-- ============ PRESENTES (sin botón) ============ -->
+        <section class="gifts-section">
+            <div class="firefly" style="left:16%;top:10px;animation-delay:1.4s"></div>
+            <div class="gifts-container">
+                <h2 class="section-title">Presentes</h2>
+                <div class="gift-icon"><img class="icon-img" src="assets/icono-regalo.png" alt=""></div>
+                <p class="gifts-text">Sua presença é o único presente que desejo.</p>
             </div>
         </section>
         <div class="seam-divider-wrap"><div class="seam-divider"><span class="line"></span><span class="ornament">✦</span><span class="line right"></span></div></div>
@@ -147,12 +123,10 @@
             <section class="rsvp-section">
                 <div class="firefly" style="left:22%;top:12px;animation-delay:.9s"></div>
                 <div class="rsvp-container">
-                    <h2 class="section-title">Confirma tu Asistencia</h2>
-                    <p class="section-subtitle">Comparte este hermoso momento conmigo</p>
-                    <div class="whatsapp-icon">
-                        <svg width="55" height="55" viewBox="0 0 24 24" fill="#25D366"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
-                    </div>
-                    <button class="btn-wedding" onclick="confirmAttendance()">Confirmar Asistencia</button>
+                    <h2 class="section-title">Confirme sua Presença</h2>
+                    <p class="section-subtitle">Compartilhe este momento tão especial comigo</p>
+                    <div class="whatsapp-icon"><img class="icon-img" src="assets/icono-whatsapp.png" alt=""></div>
+                    <button class="btn-wedding" onclick="confirmAttendance()">Confirmar Presença</button>
                 </div>
             </section>
 
@@ -164,9 +138,9 @@
 
             <footer class="footer">
                 <div class="footer-content">
-                    <p>Con cariño,</p>
-                    <h3>María</h3>
-                    <p class="footer-date">14 de Noviembre, 2026</p>
+                    <p>Com carinho,</p>
+                    <h3>Aliny Lara</h3>
+                    <p class="footer-date">13 de Novembro de 2026</p>
                 </div>
                 <div class="frog-decor"><img src="assets/frog.png" alt=""></div>
             </footer>
@@ -182,10 +156,10 @@
             <div class="info-modal-box">
                 <h3 id="infoModalTitle" class="info-modal-title"></h3>
                 <div id="infoModalBody" class="info-modal-body"></div>
-                <button class="btn-gold-outline" onclick="closeInfoModal()">Cerrar</button>
+                <button class="btn-gold-outline" onclick="closeInfoModal()">Fechar</button>
             </div>
         </div>
 
-        <script src="JAVAB.js?v=23" defer></script>
+        <script src="JAVAB.js?v=25" defer></script>
 </body>
 </html>
