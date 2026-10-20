@@ -5,9 +5,15 @@
 .main-center{width:100%;overflow:hidden}.content{position:relative;z-index:2;width:min(1100px,100%);margin:0 auto;background:var(--forest)}
 
 /* ============ PORTADA ============ */
-.hero-section{position:fixed;top:0;left:0;width:100%;height:100vh;z-index:0;background-color:var(--forest);background-image:url('foto0.jpg?v=3');background-size:cover;background-position:center top;background-repeat:no-repeat;overflow:hidden}
-.hero-spacer{width:100%;height:100vh}
-.hero-content{position:relative;z-index:2;width:100%;height:100%;display:flex;align-items:flex-end;justify-content:center;padding-bottom:2rem}
+.hero-section{position:fixed;top:0;left:0;width:100%;height:100vh;height:100lvh;z-index:0;background-color:var(--forest);overflow:hidden}
+/* Fondo difuminado de la misma foto para rellenar los bordes */
+.hero-section::before{content:'';position:absolute;inset:-40px;background:url('foto0.jpg?v=3') center/cover no-repeat;filter:blur(30px) brightness(.55) saturate(1.2);opacity:.6}
+/* Foto completa: se ve entera en cualquier pantalla (sin recortes en móvil) */
+.hero-section::after{content:'';position:absolute;left:0;right:0;top:0;height:100vh;height:100svh;background:url('foto0.jpg?v=3') center/contain no-repeat;z-index:1}
+.hero-spacer{width:100%;height:100vh;height:100svh}
+.hero-content{position:relative;z-index:2;width:100%;height:100vh;height:100svh;display:flex;align-items:flex-end;justify-content:center;padding-bottom:2rem}
+/* Teléfonos (pantallas más altas que la foto 2:3): la portada mide exactamente lo que la foto, ancho completo y sin recortes */
+@media (max-aspect-ratio:2/3){.hero-section,.hero-section::after,.hero-content,.hero-spacer{height:150vw}.hero-section::after{background-position:center top}.hero-content{padding-bottom:1rem}}
 .scroll-indicator{opacity:.85}.scroll-mouse{width:24px;height:38px;border:1px solid var(--gold-2);border-radius:20px;padding-top:7px;background:rgba(16,36,110,.25)}.scroll-wheel{width:3px;height:7px;border-radius:5px;background:var(--gold-2);margin:auto;animation:scroll 1.5s infinite}@keyframes scroll{50%{transform:translateY(9px);opacity:.35}}
 
 /* ============ TÍTULOS Y BOTONES COMUNES ============ */
@@ -180,3 +186,13 @@ html.intro-lock,html.intro-lock body{overflow:hidden}
 .icon-img{width:72px;height:auto;display:block;filter:drop-shadow(0 0 8px rgba(240,215,138,.45)) drop-shadow(0 6px 12px rgba(0,0,0,.35))}
 .icon-img.icon-bowtie{width:96px;margin:10px 0}
 .bowtie-icon svg{filter:none}
+
+/* ============ PRESENTES: texto + botón de dicas ============ */
+.gifts-container{max-width:360px}
+.gifts-heading{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;line-height:1.2;color:var(--gold-2);margin-bottom:.6rem;text-shadow:0 2px 10px rgba(0,0,0,.6)}
+.gifts-text-small{font-family:'Montserrat',sans-serif;font-size:.82rem;line-height:1.55;opacity:.92;margin:.7rem 0 1.3rem}
+.gift-tips{list-style:none;text-align:left;margin:0 0 1.1rem;display:flex;flex-direction:column;gap:.6rem}
+.gift-tips li{display:flex;align-items:center;gap:.8rem;background:rgba(0,0,0,.25);border:1px solid rgba(214,179,90,.3);border-radius:12px;padding:.75rem .9rem;font-size:.88rem;color:var(--cream)}
+.gift-tips strong{color:var(--gold-2);font-weight:600}
+.gift-tip-emoji{font-size:1.5rem;line-height:1;flex:0 0 auto}
+.info-modal-body p.gift-tips-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;line-height:1.4;color:#fff8e5}
