@@ -401,6 +401,18 @@ function showDressCode() {
     );
 }
 
+function showGiftTips() {
+    showInfoModal(
+        "Dicas de presente",
+        `<ul class="gift-tips">
+            <li><span class="gift-tip-emoji" aria-hidden="true">🎨</span><span><strong>Cores que amo:</strong> azul, preto, branco e lilás.</span></li>
+            <li><span class="gift-tip-emoji" aria-hidden="true">👗</span><span><strong>Manequim:</strong> M</span></li>
+            <li><span class="gift-tip-emoji" aria-hidden="true">👠</span><span><strong>Calçado:</strong> 37</span></li>
+         </ul>
+         <p class="gift-tips-note">O que realmente importa é o carinho por trás de cada gesto. Será uma alegria compartilhar esse momento tão especial com você!</p>`
+    );
+}
+
 function confirmAttendance() {
     window.open('https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(WHATSAPP_MENSAGEM), '_blank');
 }
